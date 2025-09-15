@@ -106,7 +106,6 @@ Bot loyihasini yuborishda quyidagi qoidalarga amal qilinishi shart:
    CMD ["python", "bot.py"]
    ```
 ---
----
 
 ✍️ Author: [Shamshod Ramazonov](https://github.com/shamshod8052)
 
