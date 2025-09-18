@@ -22,7 +22,7 @@ Server prerequisites:
 
 Usage:
 - Fill BOT_TOKEN and ADMINS in the file or set as env vars
-- Run: python telegram_deploy_bot.py
+- Run: python main.py
 - Send a ZIP file to the bot with caption: name:mybot (optional). If no name provided, the filename is used
 
 """
@@ -101,7 +101,7 @@ def generate_default_dockerfile(project_dir: Path):
     else:
         lines += ["# No requirements detected", "# If your bot needs packages, add requirements.txt to ZIP"]
 
-    lines += ["COPY . .", "CMD [\"python\", \"bot.py\"]"]
+    lines += ["COPY . .", "CMD [\"python\", \"main.py\"]"]
     dockerfile.write_text("\n".join(lines))
     return True
 
@@ -173,7 +173,7 @@ async def handle_zip(message: Message):
 
     generated = generate_default_dockerfile(project_dir)
     if generated:
-        await message.answer("No Dockerfile found, generated a default Dockerfile (expects bot.py or requirements.txt).")
+        await message.answer("No Dockerfile found, generated a default Dockerfile (expects main.py or requirements.txt).")
 
     image_tag = f"deploybot/{name}:{ts}"
     container_name = f"deploy_{name}_{ts}"
