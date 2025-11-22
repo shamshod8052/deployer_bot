@@ -1,4 +1,3 @@
-```markdown
 # Deployer Bot
 
 Telegram orqali yuborilgan **zip fayl** ichidagi bot loyihalarni avtomatik **serverga deploy qiluvchi** yordamchi bot.
@@ -108,5 +107,3 @@ Bot loyihasini yuborishda quyidagi qoidalarga amal qilinishi shart:
 ---
 
 ✍️ Author: [Shamshod Ramazonov](https://github.com/shamshod8052)
-
-```
